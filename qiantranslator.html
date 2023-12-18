@@ -4,11 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPT-3 Translator</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .translator-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        textarea, select, button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <div class="translator-container">
         <textarea id="inputText" placeholder="Enter text..."></textarea>
+        <br>
 
         <div class="language-options">
             <label for="inputLanguage">Input Language:</label>
@@ -18,8 +58,7 @@
                 <option value="zh-CN">Chinese (Simplified)</option>
             </select>
         </div>
-
-        <button onclick="translate()">Translate</button>
+        <br>
 
         <div class="language-options">
             <label for="outputLanguage">Output Language:</label>
@@ -29,6 +68,10 @@
                 <option value="zh-CN">Chinese (Simplified)</option>
             </select>
         </div>
+        <br>
+
+        <button onclick="translate()">Translate</button>
+        <br>
 
         <textarea id="outputText" placeholder="Translation will appear here..." readonly></textarea>
     </div>

@@ -26,3 +26,8 @@ async function translate() {
         console.error('Translation error:', error);
     }
 }
+
+// Enable the Output Language dropdown when a language is selected for Input Language
+document.getElementById('inputLanguage').addEventListener('change', function() {
+    document.getElementById('outputLanguage').removeAttribute('disabled');
+});

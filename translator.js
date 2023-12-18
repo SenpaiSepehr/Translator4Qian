@@ -1,7 +1,11 @@
 async function translate() {
     const inputText = document.getElementById('inputText').value;
     const inputLanguage = document.getElementById('inputLanguage').value;
-    const outputLanguage = document.getElementById('outputLanguage').value;
+    const outputLanguageDropdown = document.getElementById('outputLanguage');
+
+    // Enable the Output Language dropdown
+    outputLanguageDropdown.removeAttribute('disabled');
+    const outputLanguage = outputLanguageDropdown.value;
 
     const apiKey = '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';
     const endpoint = 'https://api.openai.com/v1/engines/davinci-codex/completions';

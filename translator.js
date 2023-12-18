@@ -1,7 +1,7 @@
-// translator.js
-
 async function translate() {
     const inputText = document.getElementById('inputText').value;
+    const inputLanguage = document.getElementById('inputLanguage').value;
+    const outputLanguage = document.getElementById('outputLanguage').value;
 
     const apiKey = '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';
     const endpoint = 'https://api.openai.com/v1/engines/davinci-codex/completions';
@@ -14,7 +14,7 @@ async function translate() {
                 'Authorization': `Bearer ${apiKey}`,
             },
             body: JSON.stringify({
-                prompt: `Translate the following English text to Japanese: "${inputText}"`,
+                prompt: `Translate the following text from ${inputLanguage} to ${outputLanguage}: "${inputText}"`,
                 max_tokens: 150, // Adjust as needed
             }),
         });
@@ -26,5 +26,3 @@ async function translate() {
         console.error('Translation error:', error);
     }
 }
-
-// You can add more functions or code as needed for your app

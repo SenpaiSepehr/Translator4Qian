@@ -3,7 +3,7 @@ async function translate() {
     const inputLanguage = document.getElementById('inputLanguage').value;
     const outputLanguageDropdown = document.getElementById('outputLanguage');
 
-    // Enable the Output Language dropdown
+    // Ensure the Output Language dropdown is enabled
     outputLanguageDropdown.removeAttribute('disabled');
     const outputLanguage = outputLanguageDropdown.value;
 
@@ -35,3 +35,6 @@ async function translate() {
 document.getElementById('inputLanguage').addEventListener('change', function() {
     document.getElementById('outputLanguage').removeAttribute('disabled');
 });
+
+// Ensure the Output Language dropdown is initially enabled
+document.getElementById('outputLanguage').removeAttribute('disabled');

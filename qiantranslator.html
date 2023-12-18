@@ -9,7 +9,27 @@
 <body>
     <div class="translator-container">
         <textarea id="inputText" placeholder="Enter text..."></textarea>
+
+        <div class="language-options">
+            <label for="inputLanguage">Input Language:</label>
+            <select id="inputLanguage">
+                <option value="en">English</option>
+                <option value="ja">Japanese</option>
+                <option value="zh-CN">Chinese (Simplified)</option>
+            </select>
+        </div>
+
         <button onclick="translate()">Translate</button>
+
+        <div class="language-options">
+            <label for="outputLanguage">Output Language:</label>
+            <select id="outputLanguage" disabled>
+                <option value="en" selected>English</option>
+                <option value="ja">Japanese</option>
+                <option value="zh-CN">Chinese (Simplified)</option>
+            </select>
+        </div>
+
         <textarea id="outputText" placeholder="Translation will appear here..." readonly></textarea>
     </div>
     <script src="translator.js"></script>

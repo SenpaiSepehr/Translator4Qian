@@ -3,7 +3,7 @@
 async function translate() {
     const inputText = document.getElementById('inputText').value;
 
-    const apiKey = 'YOUR_OPENAI_API_KEY';
+    const apiKey = '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';
     const endpoint = 'https://api.openai.com/v1/engines/davinci-codex/completions';
 
     try {
